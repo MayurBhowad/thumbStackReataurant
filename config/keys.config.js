@@ -1,3 +1,1 @@
-module.exports = {
-    mongoURI: 'mongodb://localhost:27017/thumbstack'
-}
+process.env.NODE_ENV === 'production' ? module.exports = require('./keys_prod') : module.exports = require('./keys_dev');
