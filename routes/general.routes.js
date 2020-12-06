@@ -39,7 +39,6 @@ router.post('/recieveBill', (req, res) => {
                 phoneNumber: req.body.phone,
                 tip: req.body.tip
             })
-            // res.json(bill)
 
             bill.save()
                 .then(bill => res.status(200).json(bill))
@@ -48,10 +47,17 @@ router.post('/recieveBill', (req, res) => {
     })
 })
 
+//@desc     get bill details by bill number
+//@route    /general/billNumber/:{billNumber}
+//access    public
 router.get('/billNumber/:billNumber', (req, res) => {
     Bill.find({ billNumber: req.params.billNumber })
         .then(ress => res.status(200).json(ress.reverse()))
 })
+
+//@desc     get bill details by phone number
+//@route    /general/phoneNumber/:{phoneNumber}
+//access    public
 router.get('/phoneNumber/:phoneNumber', (req, res) => {
     Bill.find({ phoneNumber: req.params.phoneNumber })
         .then(ress => res.status(200).json(ress.reverse()))
