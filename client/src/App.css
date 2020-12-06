@@ -1,0 +1,44 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@900&display=swap');
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* * {
+  padding: 0;
+  margin: 0;
+} */
+
+Button {
+  width: 100%;
+}
+
+.container {
+  margin: 10px 30px;
+}
+
+.topbar {
+  font-family: 'Teko', sans-serif;
+  color: rgb(24, 24, 24);
+  position: relative;
+  justify-content: center;
+  height: 60px;
+  text-align: center;
+  background-image: linear-gradient(#5892d4, #ffffff);
+}
+
+.order-list {
+  margin-top: 30px;
+}
