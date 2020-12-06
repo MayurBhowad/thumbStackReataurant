@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const keys = require('./keys.config');
 
 const mongoConnect = () => {
-    mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
+    mongoose.connect(keys.MongoURI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
         .then(() => console.log('db connected'))
         .catch(err => console.log(err));
 }
