@@ -17,11 +17,12 @@ jobs:
       - name: testing 
         id: test
         run: cd client && npm test
+      
+      - name: deploy
+        id: deploy
+      - uses: akhileshns/heroku-deploy@v3.6.8 # This is the action
 
-
-      # - uses: akhileshns/heroku-deploy@v3.6.8 # This is the action
-
-      #   with:
-      #     heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-      #     heroku_app_name: "thumbstackrestaurant" #Must be unique in Heroku
-      #     heroku_email: "mayurbhowad1995@gmail.com"
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "thumbstackrestaurant" #Must be unique in Heroku
+          heroku_email: "mayurbhowad1995@gmail.com"
